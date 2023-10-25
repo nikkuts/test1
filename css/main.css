@@ -101,18 +101,36 @@ body {
 }
 
 .header {
-  position: relative;
   border-bottom: 1px solid #ECECEC;
 }
 
-
-/* @media screen and (min-width: 768px) {
-  .main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+@media screen and (max-width: 1199px) {
+  .logo {
+    font-size: 24px;
+    line-height: 1.1666666667;
   }
-} */
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.1923076923;
+  }
+}
+.logo .black {
+  color: #000000;
+  transition-property: color;
+  transition-duration: var(--animation-time);
+  transition-timing-function: var(--animation-timing-function);
+}
+.logo:hover, .logo:focus {
+  color: var(--accent-color);
+}
 
 .nav {
   display: flex;
