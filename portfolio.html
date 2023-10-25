@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Портфоліо</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <a class=" nav-link link" href="./index.html">WebStudio</a>
+                    <ul class="nav-list">
+                        <li class="item"><a class=" nav-link link" href="./index.html">Студія</a></li>
+                        <li class="item"><a class="portfolio-link link" href="./portfolio.html">Портфоліо</a></li>
+                        <li class="item"><a class="nav-link link" href="./benefits.html">Переваги</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>             
+            <section class="container">
+                    <ul class="activity-list">
+                        <li class="item">
+                            <h2 class=".activity__title">Додаток</h2>
+                            <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                            <button class="portfolio__btn btn" type="button" data-modal-open>Замовити послугу</button>
+                        </li>
+                        <li class="item">
+                            <h2 class=".activity__title">Технокряк</h2>
+                            <img srcset="./images/gallery2_l@1x.jpg 1x, ./images/gallery2_l@2x.jpg 2x" 
+                            src="./images/gallery2.jpg" alt="gallery2" width="370">
+                        </li>   
+                    </ul>
+            </section>           
+        </main>    
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-close" data-modal-close>
+                    <svg class="modal-close-svg" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+                <form class="form-modal">
+                    <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+                    <div class="form-modal-field">
+                        <label for="name">Ім'я</label>
+                        <input type="text" name="name" id="name"/>
+                        <span class="icon">
+                            <svg width="18" height="18">
+                                <use href="./images/symbol-defs.svg#icon-person-black"></use>
+                            </svg> 
+                        </span>
+                    </div>
+                    <div class="form-modal-field">            
+                        <label for="tel">Телефон</label>
+                        <input type="tel" name="tel" id="tel"/>
+                        <span class="icon">
+                            <svg width="18" height="18">
+                                <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+                            </svg> 
+                        </span>
+                    </div>
+                    <div class="form-modal-field">
+                        <label for="email">Пошта</label>
+                        <input type="email" name="email" id="email"/>
+                        <span class="icon">
+                            <svg width="18" height="18">
+                                <use href="./images/symbol-defs.svg#icon-email-black"></use>
+                            </svg> 
+                        </span>
+                    </div>
+                    <div class="form-modal-field">
+                        <label for="comment">Коментар</label>
+                        <textarea name="comment" id="comment" placeholder="Введіть текст"></textarea>
+                    </div>
+                    <label class="form-checkbox">
+                        <input class="checkbox" type="checkbox" name="policy"/>
+                        <svg class="icon-check-svg" width="16" height="15">
+                            <use href="./images/symbol-defs.svg#icon-icon-check"></use>
+                        </svg> 
+                        <span class="policy-text">Погоджуюся з розсилкою та приймаю <span><a class="policy-link" href=" ">Умови договору</a></span></span>
+                    </label> 
+                    <button type="button" class="modal-btn">Відправити</button>
+                </form>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
+    </body>
+</html>
